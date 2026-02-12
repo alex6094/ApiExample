@@ -1,4 +1,4 @@
-namespace ApiExample
+namespace ApiExample.Entities
 {
     public class WeatherForecast
     {
