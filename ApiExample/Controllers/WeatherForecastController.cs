@@ -1,3 +1,4 @@
+using ApiExample.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiExample.Controllers
