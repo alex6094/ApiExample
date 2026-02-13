@@ -1,4 +1,5 @@
-﻿using ApiExample.Entities;
+﻿using ApiExample.Data;
+using ApiExample.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,14 @@ namespace ApiExample.Controllers
 	[ApiController]
 	public class SuperHeroController : ControllerBase
 	{
+
+		private readonly DataContext _context;
+
+		public SuperHeroController(DataContext context)
+		{
+			_context = context;
+		}
+
 		[HttpGet]
 		public async Task<ActionResult<List<SuperHero>>> GetAllHeroes()
 		{
